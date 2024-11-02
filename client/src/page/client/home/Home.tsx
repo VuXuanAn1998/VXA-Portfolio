@@ -1,9 +1,24 @@
 import { useTranslation } from 'react-i18next'
 import { MOCK_DATA } from '../../../constants/mockData'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const Home: React.FC = () => {
 	const { t } = useTranslation()
+	const [data, setData] = useState(null)
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await axios.get('http://localhost:3001/product')
+				setData(response.data)
+			} catch (error) {
+				console.error('Error fetching data:', error)
+			}
+		}
+
+		fetchData()
+	}, [])
+
 	return (
 		<div className='md:grid md:grid-cols-3 px-8 h-[100vh] my-auto'>
 			<div className='hidden md:block fixed w-full h-[200%] top-[-50%] left-[-83%]  rotate-[-15deg] bg-primary-light dark:bg-primary-dark z-1 px-8'></div>

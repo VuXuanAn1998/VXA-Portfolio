@@ -1,16 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-service/node_modules
-vuxuanan-cv/node_modules
-vuxuanan-cv/.pnp
+node_modules
+server/node_modules
+client/node_modules
+client/.pnp
 .pnp.js
 
 # testing
 /coverage
 
 # production
-vuxuanan-cv/build
+client/build
 
 # misc
 .DS_Store

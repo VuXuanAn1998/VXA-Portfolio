@@ -18,6 +18,10 @@ module.exports = {
         text: {
           light: '#000000', // Màu chữ cho light theme
           dark: '#FFFFFF'   // Màu chữ cho dark theme
+        },
+        backgroundBody : {
+          light : "#000000",
+          dark: "#0F1214"
         }
       }
     },

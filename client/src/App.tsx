@@ -8,20 +8,20 @@ import Header from './component/Header';
 import Setting from './component/Setting';
 const MyComponent: React.FC = () => {
   return (
-    <BrowserRouter>
-     <Header/>
-     <Setting/>
-      <div className="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/blog" element={<Blog />} /> */}
-        </Routes>
-      </div>
-    </BrowserRouter>  
-  );
+		<BrowserRouter>
+			<Header />
+			<Setting />
+			<div className='main  h-full'>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/portfolio' element={<Portfolio />} />
+					<Route path='/contact' element={<Contact />} />
+					{/* <Route path="/blog" element={<Blog />} /> */}
+				</Routes>
+			</div>
+		</BrowserRouter>
+	)
 };
 
 export default MyComponent;

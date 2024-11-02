@@ -37,7 +37,7 @@ const Header: React.FC = () => {
 				<li key={i} className='w-fit ml-auto'>
 					<Link to={item.path} className='p-0 m-0'>
 						<div
-							className={` relative md:p-4 p-3 rounded-full cursor-pointer group flex ${i === active ? 'bg-primary-light dark:bg-primary-dark' : 'bg-[#EEEEEE]'}`}
+							className={` relative md:p-4 p-3 rounded-full cursor-pointer transition-show group flex ${i === active ? 'bg-primary-light dark:bg-primary-dark' : 'bg-[#EEEEEE]'}`}
 						>
 							<h2
 								className={`h-[20px] overflow-hidden relative top-[-1px] text-white mr-2 text-base font-medium uppercase hidden group-hover:block transition-show`}
