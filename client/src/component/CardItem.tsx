@@ -1,30 +1,23 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography, Stack, Chip } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography, Stack, Chip } from '@mui/material'
 import React from 'react'
 
-const ComponentName: React.FC = () => {
+const CardItem: React.FC<{ cardValue: any }> = ({ cardValue }) => {
 	return (
-		<Card sx={{ maxWidth: 400 }}>
-			<CardMedia
-				component='img'
-				alt='green iguana'
-				height='100'
-				image='https://www.zdnet.com/a/img/resize/bbe666ef137aa0d1dffa9b5802566076611f62cf/2022/08/23/5db1fdfe-6fd5-4676-84cf-a8bb5ba753ce/erepublic-brightspotcdn.jpg?auto=webp&width=1280'
-			/>
+		<Card sx={{ maxWidth: 400 }} className='cursor-pointer'>
+			<CardMedia component='img' alt={cardValue.name} height='100' image={cardValue.img} />
 			<CardContent>
 				<Typography gutterBottom variant='h5' component='div'>
-					Lizard
+					{cardValue.name}
 				</Typography>
 				<Typography variant='body2' sx={{ color: 'text.secondary' }}>
-					Lizards are a widespread group of squamate reptiles, with over 6,000 species
+					{cardValue.desc}f
 				</Typography>
 				<div className='mt-3'>
 					<Stack direction='row' className='w-full inline-block flex-wrap gap-2'>
-						<Chip label='Angular' color='primary' />
-						<Chip label='React JS' color='success' />
-						<Chip label='Angular' color='primary' />
-						<Chip label='React JS' color='success' />
-						<Chip label='Angular' color='primary' />
-						<Chip label='React JS' color='success' />
+						{cardValue &&
+							cardValue.tags.map((item: string, index: number) => {
+								return <Chip label={item} color='primary' key={index} />
+							})}
 					</Stack>
 				</div>
 			</CardContent>
@@ -32,4 +25,4 @@ const ComponentName: React.FC = () => {
 	)
 }
 
-export default ComponentName
+export default CardItem

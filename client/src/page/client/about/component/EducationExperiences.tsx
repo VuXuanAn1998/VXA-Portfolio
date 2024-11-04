@@ -14,7 +14,7 @@ const EducationExperiences: React.FC<{ EduAndEx: any }> = ({ EduAndEx }) => {
 									<div className='p-3 rounded-[50%] dark:bg-primary-dark bg-primary-light w-fit h-fit'>
 										<GiGraduateCap className='text-white w-5 h-5' />
 									</div>
-									<div className='h-full w-[1px] bg-[#666666] mx-auto my-0 self-stretch'></div>
+									<div className='h-full w-[1px] bg-[#a5a5a5] mx-auto my-0 self-stretch'></div>
 								</div>
 
 								<div className='flex flex-col text-[#666666] gap-3'>

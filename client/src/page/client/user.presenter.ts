@@ -54,6 +54,9 @@ export class UserPresenter {
             },
         ]
     }
+    get getProjectList () {
+        return this.UserPresenter.vn.projects
+    }
     get getEducation() {
         return this.UserPresenter.vn.education
     }

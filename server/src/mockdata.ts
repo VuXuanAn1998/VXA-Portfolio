@@ -130,6 +130,7 @@ export  const DUMMY_USER = {
         projects : [
          {
             name: 'OHVC-GUI',
+            img: ['https://www.zdnet.com/a/img/resize/bbe666ef137aa0d1dffa9b5802566076611f62cf/2022/08/23/5db1fdfe-6fd5-4676-84cf-a8bb5ba753ce/erepublic-brightspotcdn.jpg?auto=webp&width=1280'],
             desc : 'A portfolio website about myself',
             created: ' Oct 2024',
             role : 'Developer',
@@ -137,6 +138,84 @@ export  const DUMMY_USER = {
             responsibilities : [
                 'Develop graphical user interfaces based on design specifications, ensuring cross-browser and cross-device compatibility',
                 'Ideate and find suitable designs, manage source code, and monitor project progress.'
+            ],
+            tags : [
+                'React','Angular'
+            ]
+         },
+         {
+            name: 'OHVC-GUI',
+            img: ['https://www.zdnet.com/a/img/resize/bbe666ef137aa0d1dffa9b5802566076611f62cf/2022/08/23/5db1fdfe-6fd5-4676-84cf-a8bb5ba753ce/erepublic-brightspotcdn.jpg?auto=webp&width=1280'],
+            desc : 'A portfolio website about myself',
+            created: ' Oct 2024',
+            role : 'Developer',
+            teamSize : '1 front-end developer',
+            responsibilities : [
+                'Develop graphical user interfaces based on design specifications, ensuring cross-browser and cross-device compatibility',
+                'Ideate and find suitable designs, manage source code, and monitor project progress.'
+            ],
+            tags : [
+                'React','Angular'
+            ]
+         },
+         {
+            name: 'OHVC-GUI',
+            img: ['https://www.zdnet.com/a/img/resize/bbe666ef137aa0d1dffa9b5802566076611f62cf/2022/08/23/5db1fdfe-6fd5-4676-84cf-a8bb5ba753ce/erepublic-brightspotcdn.jpg?auto=webp&width=1280'],
+            desc : 'A portfolio website about myself',
+            created: ' Oct 2024',
+            role : 'Developer',
+            teamSize : '1 front-end developer',
+            responsibilities : [
+                'Develop graphical user interfaces based on design specifications, ensuring cross-browser and cross-device compatibility',
+                'Ideate and find suitable designs, manage source code, and monitor project progress.'
+            ],
+            tags : [
+                'React','Angular'
+            ]
+         },
+         {
+            name: 'OHVC-GUI',
+            img: ['https://www.zdnet.com/a/img/resize/bbe666ef137aa0d1dffa9b5802566076611f62cf/2022/08/23/5db1fdfe-6fd5-4676-84cf-a8bb5ba753ce/erepublic-brightspotcdn.jpg?auto=webp&width=1280'],
+            desc : 'A portfolio website about myself',
+            created: ' Oct 2024',
+            role : 'Developer',
+            teamSize : '1 front-end developer',
+            responsibilities : [
+                'Develop graphical user interfaces based on design specifications, ensuring cross-browser and cross-device compatibility',
+                'Ideate and find suitable designs, manage source code, and monitor project progress.'
+            ],
+            tags : [
+                'React','Angular'
+            ]
+         },
+         {
+            name: 'OHVC-GUI',
+            img: ['https://www.zdnet.com/a/img/resize/bbe666ef137aa0d1dffa9b5802566076611f62cf/2022/08/23/5db1fdfe-6fd5-4676-84cf-a8bb5ba753ce/erepublic-brightspotcdn.jpg?auto=webp&width=1280'],
+            desc : 'A portfolio website about myself',
+            created: ' Oct 2024',
+            role : 'Developer',
+            teamSize : '1 front-end developer',
+            responsibilities : [
+                'Develop graphical user interfaces based on design specifications, ensuring cross-browser and cross-device compatibility',
+                'Ideate and find suitable designs, manage source code, and monitor project progress.'
+            ],
+            tags : [
+                'React','Angular'
+            ]
+         },
+         {
+            name: 'OHVC-GUI',
+            img: ['https://www.zdnet.com/a/img/resize/bbe666ef137aa0d1dffa9b5802566076611f62cf/2022/08/23/5db1fdfe-6fd5-4676-84cf-a8bb5ba753ce/erepublic-brightspotcdn.jpg?auto=webp&width=1280'],
+            desc : 'A portfolio website about myself',
+            created: ' Oct 2024',
+            role : 'Developer',
+            teamSize : '1 front-end developer',
+            responsibilities : [
+                'Develop graphical user interfaces based on design specifications, ensuring cross-browser and cross-device compatibility',
+                'Ideate and find suitable designs, manage source code, and monitor project progress.'
+            ],
+            tags : [
+                'React','Angular'
             ]
          }
             
