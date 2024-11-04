@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, CardMedia, Typography, Stack, Chip } from '@mui/material'
 import React from 'react'
 
 const ComponentName: React.FC = () => {
@@ -15,14 +15,19 @@ const ComponentName: React.FC = () => {
 					Lizard
 				</Typography>
 				<Typography variant='body2' sx={{ color: 'text.secondary' }}>
-					Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents
-					except Antarctica
+					Lizards are a widespread group of squamate reptiles, with over 6,000 species
 				</Typography>
+				<div className='mt-3'>
+					<Stack direction='row' className='w-full inline-block flex-wrap gap-2'>
+						<Chip label='Angular' color='primary' />
+						<Chip label='React JS' color='success' />
+						<Chip label='Angular' color='primary' />
+						<Chip label='React JS' color='success' />
+						<Chip label='Angular' color='primary' />
+						<Chip label='React JS' color='success' />
+					</Stack>
+				</div>
 			</CardContent>
-			<CardActions>
-				<Button size='small'>Share</Button>
-				<Button size='small'>Learn More</Button>
-			</CardActions>
 		</Card>
 	)
 }

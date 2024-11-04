@@ -32,9 +32,9 @@ const Header: React.FC = () => {
 
 	const active = navList.findIndex((e) => e.path === pathname)
 	return (
-		<ul className='fixed md:right-4  md:top-[50%] bg-[#2b2a2a] md:bg-transparent w-full py-4 md:py-0 justify-around md:w-fit h-fit right-0 bottom-0  md:translate-y-[-50%] z-20 gap-5 flex md:flex-col '>
+		<ul className='fixed md:right-4  md:top-[50%] bg-[#2b2a2a] md:bg-transparent justify-items-center w-full py-4 md:py-0 justify-around md:w-fit h-fit right-0 bottom-0  md:translate-y-[-50%] z-20 gap-5 flex md:flex-col '>
 			{navList.map((item, i) => (
-				<li key={i} className='w-fit ml-auto'>
+				<li key={i} className='w-fit md:ml-auto'>
 					<Link to={item.path} className='p-0 m-0'>
 						<div
 							className={` relative md:p-4 p-3 rounded-full cursor-pointer transition-show group flex ${i === active ? 'bg-primary-light dark:bg-primary-dark' : 'bg-[#EEEEEE]'}`}
