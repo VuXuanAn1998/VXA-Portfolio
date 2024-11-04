@@ -1,19 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import { MOCK_DATA } from '../../../constants/mockData'
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 
+import UserClass from '../user.service'
 const Home: React.FC = () => {
 	const { t } = useTranslation()
-	const [data, setData] = useState(null)
+	const [data, setData] = useState<any>(null)
 	useEffect(() => {
 		const fetchData = async () => {
-			try {
-				const response = await axios.get('http://localhost:3001/product')
-				setData(response.data)
-			} catch (error) {
-				console.error('Error fetching data:', error)
-			}
+			const data = await UserClass.getDetailsUser()
+			setData(data)
 		}
 
 		fetchData()

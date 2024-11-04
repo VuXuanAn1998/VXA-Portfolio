@@ -6,7 +6,141 @@ export  const DUMMY_USER = {
     },
     vn: {
         username :  'Vũ Xuân An',
+        gender: 'male',
+        nationality: 'Vietnam',
+        phoneNumber: '0705882717',
+        address: 'Hai Phong city',
+        socialMedia: [
+            {
+                name: 'facebook',
+                link: ''
+            }
+        ],
+        email: '',
+        languages: ['Vietnam', 'English'],
+        resume: '',
+        education: [
+            { 
+                time: 'Oct 2018 - May 2024',
+                title: 'Hai Phong University ',
+                subTitle: 'Information Technology',
+                desc: 'GPA: 3.1/4'
+            },
+            { 
+                time: 'Jan 2022 - Mar 2022',
+                title: 'FPT Academy',
+                subTitle: 'Fresher Angular',
+                desc: ''
+            },
+            { 
+                time: 'Mar 2022 - Now',
+                title: 'FPT Software',
+                subTitle: 'Web Developer',
+                desc: 'I started my career at FPT Software as a Front-end Developer.'
+            }
+        ],
+        skills: [
+            {
+                title : 'Programming Languages',
+                skillList : [
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    }
+                ]
+            },
+            {
+                title : 'Framework/Platforms',
+                skillList : [
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    }
+                ]
+            },
+            {
+                title : 'Methodology',
+                skillList : [
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    }
+                ]
+            },
+            {
+                title : 'API/Communication Protocols',
+                skillList : [
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    }
+                ]
+            },
+            {
+                title : 'Non-Microsoft Source Controls',
+                skillList : [
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    },
+                    {
+                        name: 'react',
+                        img: 'https://th.bing.com/th/id/R.b47611fbaa18a5db95d633e023840f56?rik=rFBVy650P8dycg&pid=ImgRaw&r=0'
+                    }
+                ]
+            }
+        ],
         dob : '20 - 04 - 1998',
+        projects : [
+         {
+            name: 'OHVC-GUI',
+            desc : 'A portfolio website about myself',
+            created: ' Oct 2024',
+            role : 'Developer',
+            teamSize : '1 front-end developer',
+            responsibilities : [
+                'Develop graphical user interfaces based on design specifications, ensuring cross-browser and cross-device compatibility',
+                'Ideate and find suitable designs, manage source code, and monitor project progress.'
+            ]
+         }
+            
+        ],
         description : 'Rất vui được gặp bạn! Tên tôi là Xuân An. Tôi là một lập trình viên front-end với hơn hai năm kinh nghiệm trong phát triển web, chuyên về tạo ra các giao diện người dùng trực quan và hấp dẫn. Với nền tảng vững chắc trong thiết kế UX/UI, tôi thích giải quyết các vấn đề phức tạp và xây dựng những trải nghiệm người dùng mượt mà. Tôi cam kết học hỏi liên tục, khám phá các công nghệ mới và áp dụng các phương pháp tốt nhất để phát triển bản thân như một kỹ sư.'
     }
 
