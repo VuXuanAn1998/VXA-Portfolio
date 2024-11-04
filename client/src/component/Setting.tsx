@@ -9,7 +9,7 @@ import { IoCloseSharp } from 'react-icons/io5'
 import { MdDarkMode } from 'react-icons/md'
 import { styled } from '@mui/material/styles'
 const CustomToggleButton = styled(ToggleButton)(({ theme }) => ({
-	fontSize: '14px', // Tùy chỉnh kích thước font nếu cần
+	fontSize: '14px',
 	textTransform: 'none',
 	backgroundColor: theme.palette.mode === 'dark' ? '#B6BEC9' : 'white',
 	color: theme.palette.mode === 'dark' ? 'white' : 'black',
@@ -48,8 +48,6 @@ const Setting: React.FC = () => {
 					</div>
 					<div className={`p-4 w-fit rounded-full cursor-pointer bg-[#EEEEEE]`}>
 						<HiLanguage className={`w-5 h-5 text-[#666666]`} />
-						{/* <button onClick={() => changeLanguages('en')}>en</button>
-						<button onClick={() => changeLanguages('vi')}>vn</button> */}
 					</div>
 				</div>
 			)}
@@ -93,6 +91,7 @@ const Setting: React.FC = () => {
 								<CustomToggleButton value='lg'>lg</CustomToggleButton>
 							</ToggleButtonGroup>
 						</div>
+						<div className='cursor-pointer text-lg text-[#666666] font-bold'>go to admin page</div>
 					</div>
 				</div>
 			</Drawer>

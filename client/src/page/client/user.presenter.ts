@@ -5,7 +5,8 @@ export class UserPresenter {
 	private UserPresenter: TDetailsUser
 	constructor(private detailsEndUser : TDetailsUser) {
 		this.UserPresenter = detailsEndUser
-	}
+      
+	} 
 	get getBasicInformation() {
 		return [
             {
@@ -59,6 +60,13 @@ export class UserPresenter {
     }
     get getEducation() {
         return this.UserPresenter.vn.education
+    }
+    get getShortInfo() {
+        return {
+            name: this.UserPresenter.vn.username,
+            desc: this.UserPresenter.vn.description,
+            avatar: this.UserPresenter.vn.avatar
+        }
     }
 
 }

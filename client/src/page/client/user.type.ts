@@ -29,6 +29,7 @@ export type TSkillList = {
     skillList : TSkill[]
 }
 export type TUser = {
+    avatar: string
     username: string 
     dob: string 
     gender: string

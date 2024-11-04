@@ -6,6 +6,7 @@ export  const DUMMY_USER = {
     },
     vn: {
         username :  'Vũ Xuân An',
+        avatar: 'https://th.bing.com/th/id/OIP.0uQb-J1mJAONnL6OuOcRcQHaHa?rs=1&pid=ImgDetMain',
         gender: 'male',
         nationality: 'Vietnam',
         phoneNumber: '0705882717',
