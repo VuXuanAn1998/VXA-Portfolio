@@ -17,6 +17,19 @@ const CustomToggleButton = styled(ToggleButton)(({ theme }) => ({
 const Setting: React.FC = () => {
 	const { t, i18n } = useTranslation()
 	const [isToggleSetting, setIsToggleSetting] = useState(false)
+	const icons = [
+		<FaRegLightbulb className='w-5 h-5 text-[#666666]' />,
+		<HiLanguage className='w-5 h-5 text-[#666666]' />,
+		<IoMdSettings className='w-5 h-5 text-[#666666]' />,
+	]
+	const [currentIconIndex, setCurrentIconIndex] = useState(0)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentIconIndex((prevIndex) => (prevIndex + 1) % icons.length)
+		}, 2000)
+		return () => clearInterval(interval)
+	}, [])
 
 	const [lng, setLng] = useState(i18n.language)
 	const [theme, setTheme] = useState('')
@@ -41,16 +54,6 @@ const Setting: React.FC = () => {
 	}, [])
 	return (
 		<div className='flex gap-5 absolute right-4 top-4'>
-			{isToggleSetting && (
-				<div className='flex gap-5 '>
-					<div className={`p-4 w-fit rounded-full cursor-pointer bg-[#EEEEEE]`} onClick={() => toggleTheme}>
-						<FaRegLightbulb className={`w-5 h-5 text-[#666666]`} />
-					</div>
-					<div className={`p-4 w-fit rounded-full cursor-pointer bg-[#EEEEEE]`}>
-						<HiLanguage className={`w-5 h-5 text-[#666666]`} />
-					</div>
-				</div>
-			)}
 			<Drawer open={isToggleSetting} onClose={() => setIsToggleSetting(false)} anchor='right'>
 				<div className='h-full dark:bg-backgroundBody-dark dark:text-white'>
 					<div className='flex w-[300px] px-4 py-2 border-b-[1px] border-[#666666] border-solid '>
@@ -99,7 +102,9 @@ const Setting: React.FC = () => {
 				className={`p-4 w-fit rounded-full cursor-pointer bg-[#EEEEEE] z-10`}
 				onClick={() => setIsToggleSetting(!isToggleSetting)}
 			>
-				<IoMdSettings className={`w-5 h-5 text-[#666666]`} />
+				<div key={currentIconIndex} className='fade-in'>
+					{icons[currentIconIndex]}
+				</div>
 			</div>
 		</div>
 	)
