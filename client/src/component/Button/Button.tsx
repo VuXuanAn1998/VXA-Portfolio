@@ -1,32 +1,17 @@
-import React, { useRef } from 'react'
-import './button.scss'
-interface ButtonProps {
-	className?: string
-	type?: 'submit' | 'reset' | 'button'
-	children?: React.ReactNode
-}
-const ComponentName: React.FC<ButtonProps> = ({ className, type, children }) => {
-	const btnRef = useRef<HTMLButtonElement | null>(null)
+import React, { ReactNode } from 'react'
 
-	const handleHoverIn = () => {
-		btnRef.current && btnRef.current.classList.add('is-hover')
-	}
-	const handleHoverOut = () => {
-		btnRef.current && btnRef.current.classList.remove('is-hover')
-	}
+type MyComponentProps = {
+	children: ReactNode
+	label: string
+}
+
+const Button: React.FC<MyComponentProps> = ({ children, label }: MyComponentProps) => {
 	return (
-		<div>
-			<button
-				className={`btn ${className}`}
-				type={type}
-				onMouseEnter={handleHoverIn}
-				onMouseLeave={handleHoverOut}
-				ref={btnRef}
-			>
-				{children}
-			</button>
-		</div>
+		<button className='border-[1px] border-primary relative pr-4 rounded-[35px] mb-5 btn'>
+			<span className='p-4 rounded-[35px] bg-primary btn-icon w-full h-full'>{children}</span>
+			<span className='font-bold text-base text-secondary btn-text pl-16 pr-2 py-[14px] inline-block'>{label}</span>
+		</button>
 	)
 }
 
-export default ComponentName
+export default Button

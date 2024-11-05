@@ -1,0 +1,6 @@
+.text-primary {
+	@apply text-primary-light dark:text-primary-dark;
+}
+.text-secondary {
+	@apply text-secondary-light dark:text-secondary-dark;
+}

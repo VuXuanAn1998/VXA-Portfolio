@@ -1,3 +1,34 @@
-.transition-show{
-    transition: all .3s ease;
+.transition-show {
+	transition: all 0.3s ease-in;
+}
+
+.btn {
+	transition: all 0.3s ease-in;
+	overflow: hidden;
+	width: fit-content;
+	&-icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: all 0.3s ease-in;
+		animation-fill-mode: ease-in;
+		animation-iteration-count: 1;
+		border-radius: 35px;
+		margin-right: calc(100% - 52px);
+		z-index: 2;
+	}
+	&-text {
+		transition: all 0.3s ease-in;
+		animation-fill-mode: ease-in;
+		animation-iteration-count: 1;
+		z-index: 10;
+		position: relative;
+	}
+}
+.btn:hover > .btn-icon {
+	transform: translateX(calc(100% - 52px));
+}
+.btn:hover > .btn-text {
+	transform: translateX(-32px);
+	color: white;
 }
