@@ -6,7 +6,7 @@ const SkillList: React.FC<{ skillList: TSkillList[] }> = ({ skillList }) => {
 		<div>
 			<p className='text-[26px] font-bold text-[#666666] text-center uppercase'>Skills</p>
 			<hr className='border-[1px] border-[#6666666] w-[40%] my-8 mx-auto'></hr>
-			<div className='grid grid-flow-row grid-cols-2'>
+			<div className='grid grid-flow-row grid-cols-3'>
 				{skillList &&
 					skillList.map((skill: TSkillList, index: number) => {
 						return (

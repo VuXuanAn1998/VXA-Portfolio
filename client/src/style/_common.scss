@@ -1,0 +1,9 @@
+.bg-primary {
+	@apply bg-primary-light dark:bg-primary-dark;
+}
+.border-primary {
+	@apply border-primary-light dark:border-primary-dark;
+}
+.hexagon {
+	@apply fixed w-full h-[200%] top-[-50%] left-[-83%] rotate-[-15deg] bg-primary;
+}
