@@ -1,11 +1,9 @@
 import PageHeader from '../../../component/PageHeader'
 import React, { useEffect, useState } from 'react'
-
 import userClass from '../user.service'
 import { UserPresenter } from '../user.presenter'
 import BasicInfo from './component/BasicInfo'
 import NumberUser from './component/NumberUser'
-import DownloadResume from './component/DownloadResume'
 import SkillList from './component/SkillList'
 import EducationExperiences from './component/EducationExperiences'
 const About: React.FC = () => {
@@ -34,7 +32,7 @@ const About: React.FC = () => {
 				<BasicInfo basicInfo={basicInfo} />
 				<NumberUser numberUser={numberUser} />
 			</div>
-			<DownloadResume />
+
 			<div className='container mx-auto'>
 				<SkillList skillList={skillList} />
 				<EducationExperiences EduAndEx={EduAndEx} />

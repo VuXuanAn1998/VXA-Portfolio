@@ -26,6 +26,12 @@ module.exports = {
 					dark: '#0F1214',
 				},
 			},
+			fontSize: {
+				'14-14-400': ['14px', { lineHeight: '14px', fontWeight: '400' }],
+				'16-20-400': ['16px', { lineHeight: '20px', fontWeight: '400' }],
+				'16-26-600': ['16px', { lineHeight: '2px', fontWeight: '600' }],
+				'26-40-700': ['26px', { lineHeight: '40px', fontWeight: '700' }],
+			},
 		},
 	},
 	plugins: [],

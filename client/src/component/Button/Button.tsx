@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 
 type MyComponentProps = {
-	children: ReactNode
+	children?: ReactNode
 	label: string
 }
 

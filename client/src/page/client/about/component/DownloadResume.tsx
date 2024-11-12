@@ -3,9 +3,10 @@ import { IoMdDownload } from 'react-icons/io'
 import Button from '../../../../component/Button'
 const DownloadResume: React.FC = () => {
 	return (
-		<Button label={'Download Resume'}>
-			<IoMdDownload className='text-white w-5 h-5 ml-auto' />
-		</Button>
+		<h1>okok</h1>
+		// <Button label={'Download Resume'}>
+		// 	<IoMdDownload className='text-white w-5 h-5 ml-auto' />
+		// </Button>
 	)
 }
 
