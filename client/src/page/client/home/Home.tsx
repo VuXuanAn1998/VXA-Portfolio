@@ -17,7 +17,7 @@ const Home: React.FC = () => {
 	}, [])
 
 	return (
-		<div className='md:grid md:grid-cols-3 px-8 h-[100vh] my-auto'>
+		<div className='md:grid md:grid-cols-3 px-8 h-[100vh] my-auto' data-aos='fade-right'>
 			<div className='hidden md:block hexagon z-1 px-8'></div>
 			<div className='px-8 grid md:col-span-1 md:h-full h-fit place-content-center z-20'>
 				<img

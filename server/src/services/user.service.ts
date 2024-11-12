@@ -1,23 +1,8 @@
-// src/services/user.service.ts
-import User, { IUser } from "../models/user.model";
+import { Router } from "express";
+import { getData } from "../controllers/user.controller";
 
-export class UserService {
-  async createUser(data: IUser) {
-    const user = new User(data);
-    return await user.save();
-  }
+const router = Router();
 
-  async getUserById(id: string) {
-    return await User.findById(id);
-  }
+router.get("/", getData);
 
-  async updateUser(id: string, data: Partial<IUser>) {
-    return await User.findByIdAndUpdate(id, data, { new: true });
-  }
-
-  async deleteUser(id: string) {
-    return await User.findByIdAndDelete(id);
-  }
-}
-
-export default new UserService();
+export default router;
