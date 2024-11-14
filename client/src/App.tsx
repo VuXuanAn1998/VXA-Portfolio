@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from "./page/client/home/Home"
-import About from "./page/client/about/About"
-import Portfolio from "./page/client/portfolio/Portfolio"
-import Contact from "./page/client/contact/Contact"
-import Header from './component/Header';
-import Setting from './component/Setting';
+import Home from './page/client/home/Home'
+import About from './page/client/about/About'
+import Portfolio from './page/client/portfolio/Portfolio'
+import Contact from './page/client/contact/Contact'
+import Header from './component/Header'
+import Setting from './component/Setting'
 import Admin from './page/admin/Admin'
 const MyComponent: React.FC = () => {
 	return (
@@ -25,4 +25,4 @@ const MyComponent: React.FC = () => {
 	)
 }
 
-export default MyComponent;
+export default MyComponent

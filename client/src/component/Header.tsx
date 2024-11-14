@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { INav } from '../types/common'
 import { AiFillHome } from 'react-icons/ai'
 import { FaBriefcase } from 'react-icons/fa'
 import { FaUser } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import { Link, useLocation } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setValue } from './../store/slice'
+import userClass from '../page/client/user.service'
 const Header: React.FC = () => {
+	const dispatch = useDispatch()
+	const fetchData = async () => {
+		const data = await userClass.getDetailsUser()
+		dispatch(setValue(data))
+		return data
+	}
+
+	useEffect(() => {
+		fetchData()
+	}, [])
+
 	const navList: INav[] = [
 		{
 			name: 'Home',

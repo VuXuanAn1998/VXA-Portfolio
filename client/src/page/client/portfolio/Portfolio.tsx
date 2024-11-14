@@ -1,17 +1,16 @@
 import PageHeader from '../../../component/PageHeader'
 import React, { useEffect, useState } from 'react'
-
-import userClass from '../user.service'
 import { UserPresenter } from '../user.presenter'
 import ProjectList from './component/Projectlist'
 import { Checkbox, FormControlLabel, FormGroup } from '@mui/material'
+import { useSelector } from 'react-redux'
 
 const Portfolio: React.FC = () => {
 	const [projectList, setProjectList] = useState<any>(null)
+	const value = useSelector((state: any) => state.user.value)
 	useEffect(() => {
 		const fetchData = async () => {
-			const data = await userClass.getDetailsUser()
-			const userPresenter = new UserPresenter(data)
+			const userPresenter = new UserPresenter(value)
 			setProjectList(userPresenter.getProjectList)
 		}
 

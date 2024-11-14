@@ -1,21 +1,21 @@
 import { useTranslation } from 'react-i18next'
 import React, { useEffect, useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
-import UserClass from '../user.service'
 import { UserPresenter } from '../user.presenter'
+import { useSelector } from 'react-redux'
+
 const Home: React.FC = () => {
 	const { t } = useTranslation()
+	const { i18n } = useTranslation()
+	const value = useSelector((state: any) => state.user.value)
 	const [data, setData] = useState<any>(null)
 	useEffect(() => {
-		const fetchData = async () => {
-			const data = await UserClass.getDetailsUser()
-			const userPresenter = new UserPresenter(data)
+		if (i18n.language && value[i18n.language]) {
+			const userPresenter = new UserPresenter(value[i18n.language])
 			setData(userPresenter.getShortInfo)
 		}
-
-		fetchData()
-	}, [])
-
+	}, [i18n.language])
+	console.log(i18n.language, 'nekkk')
 	return (
 		<div className='md:grid md:grid-cols-3 px-8 h-[100vh] my-auto' data-aos='fade-right'>
 			<div className='hidden md:block hexagon z-1 px-8'></div>
