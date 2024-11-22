@@ -1,48 +1,37 @@
-import Box from '@mui/material/Box'
-import Drawer from '@mui/material/Drawer'
-import CssBaseline from '@mui/material/CssBaseline'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import List from '@mui/material/List'
-import Typography from '@mui/material/Typography'
-import Divider from '@mui/material/Divider'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
+import React, { useState } from 'react'
 
-import ListItemText from '@mui/material/ListItemText'
-import { useState } from 'react'
-
-const drawerWidth = 200
-
-export default function PermanentDrawerLeft() {
-	const [activeButton, setActiveButton] = useState<string>('')
+export default function Admin() {
+	const [AvtiveButton, setAvtiveButton] = useState<number>(1)
+	const listAction = [
+		{ label: 'Basic Infomation', value: 1 },
+		{ label: 'Project', value: 2 },
+		{ label: 'Education', value: 3 },
+		{ label: 'Interest', value: 4 },
+	]
 	return (
-		<Box sx={{ display: 'flex' }}>
-			<CssBaseline />
-			<AppBar position='fixed'>
-				<Toolbar>
-					<Typography variant='h6' noWrap component='div'>
-						{activeButton}
-					</Typography>
-				</Toolbar>
-			</AppBar>
-			<Drawer variant='permanent' anchor='left'>
-				<Toolbar />
-				<Divider />
-				<List>
-					{['Basic Information', 'Projects', 'Education', 'Experiences'].map((text, index) => (
-						<ListItem key={text} disablePadding onClick={() => setActiveButton(text)}>
-							<ListItemButton>
-								<ListItemText primary={text} />
-							</ListItemButton>
-						</ListItem>
-					))}
-				</List>
-			</Drawer>
-			<Box component='main' sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
-				<Toolbar />
-				<Typography sx={{ marginBottom: 2 }}>{activeButton}</Typography>
-			</Box>
-		</Box>
+		<div className='h-[100vh]'>
+			<div className='p-5 bg-slate-500 text-white text-16-26-600'>
+				{listAction.find((item) => item.value === AvtiveButton)?.label}
+			</div>
+			<div className='grid grid-cols-[200px_1fr] h-full'>
+				<div className='h-full w-full border-right border-1px border-solid border-[red]'>
+					<ul className='flex gap-5 flex-col px-5 pt-5 cursor-pointer'>
+						{listAction.map((action, index) => {
+							return (
+								<li
+									key={index}
+									className={`hover:bg-yellow-300  rounded-lg pl-4 py-2 ${AvtiveButton === action.value ? 'text-white bg-slate-400' : ''}`}
+									onClick={() => setAvtiveButton(action.value)}
+								>
+									{action.label}
+								</li>
+							)
+						})}
+					</ul>
+				</div>
+
+				<div className='h-full w-full bg-red-50 '> this is content</div>
+			</div>
+		</div>
 	)
 }

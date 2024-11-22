@@ -7,3 +7,6 @@
 .hexagon {
 	@apply fixed w-full h-[200%] top-[-50%] left-[-83%] rotate-[-15deg] bg-primary;
 }
+.text-primary {
+	@apply text-text-light dark:text-text-dark;
+}

@@ -57,6 +57,7 @@ export class UserPresenter {
 		]
 	}
 	get getProjectList() {
+		console.log(this.UserPresenter, 'jejeje')
 		if (!this.UserPresenter) return
 		return this.UserPresenter.projects
 	}

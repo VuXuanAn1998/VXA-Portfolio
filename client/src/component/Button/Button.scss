@@ -1,0 +1,134 @@
+/* From Uiverse.io by mrhyddenn */
+.basic-button {
+	background: transparent;
+	position: relative;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	font-size: 17px;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid #72b626;
+	border-radius: 25px;
+	outline: none;
+	overflow: hidden;
+	color: #72b626;
+	transition: color 0.3s 0.1s ease-out;
+	text-align: center;
+}
+
+.basic-button span {
+	margin: 10px;
+}
+
+.basic-button::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	content: '';
+	border-radius: 50%;
+	display: block;
+	width: 20em;
+	height: 20em;
+	left: -5em;
+	text-align: center;
+	transition: box-shadow 0.5s ease-out;
+	z-index: -1;
+}
+
+.basic-button:hover {
+	color: #fff;
+	border: 1px solid #72b626;
+}
+
+.basic-button:hover::before {
+	box-shadow: inset 0 0 0 10em #72b626;
+}
+.dark {
+	.basic-button {
+		border: 1px solid #ffb400;
+		color: #ffb400;
+	}
+	.basic-button:hover {
+		color: black;
+		border: 1px solid #ffb400;
+	}
+
+	.basic-button:hover::before {
+		box-shadow: inset 0 0 0 10em #ffb400;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+.icon-content {
+	margin: 0 10px;
+	position: relative;
+	padding: 0.5rem;
+}
+.icon-content .tooltip {
+	position: absolute;
+	top: 100%;
+	right: 110%;
+	transform: translateY(200%);
+	color: #fff;
+	padding: 6px 10px;
+	border-radius: 5px;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 14px;
+	transition: all 0.3s ease;
+}
+.icon-content:hover .tooltip {
+	opacity: 1;
+	visibility: visible;
+	top: -50px;
+}
+.icon-content a {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: #4d4d4d;
+	transition: all 0.3s ease-in-out;
+}
+.icon-content a:hover {
+	box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.icon-content a svg {
+	position: relative;
+	z-index: 1;
+	width: 20px;
+	height: 20px;
+}
+.icon-content a:hover {
+	color: white;
+}
+.icon-content a .filled {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: #000;
+	transition: all 0.3s ease-in-out;
+}
+.icon-content a:hover .filled {
+	height: 100%;
+}
+
+.icon-content a[data-social='linkedin'] .filled,
+.icon-content a[data-social='linkedin'] ~ .tooltip {
+	background-color: #0274b3;
+}

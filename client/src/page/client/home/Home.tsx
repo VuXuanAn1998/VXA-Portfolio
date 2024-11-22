@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import { UserPresenter } from '../user.presenter'
 import { useSelector } from 'react-redux'
+import BasicButton from '../../../component/Button/BasicButton'
 
 const Home: React.FC = () => {
 	const { t } = useTranslation()
@@ -10,12 +11,13 @@ const Home: React.FC = () => {
 	const value = useSelector((state: any) => state.user.value)
 	const [data, setData] = useState<any>(null)
 	useEffect(() => {
-		if (i18n.language && value[i18n.language]) {
-			const userPresenter = new UserPresenter(value[i18n.language])
-			setData(userPresenter.getShortInfo)
+		if (value) {
+			if (i18n.language && value[i18n.language]) {
+				const userPresenter = new UserPresenter(value[i18n.language])
+				setData(userPresenter.getShortInfo)
+			}
 		}
-	}, [i18n.language])
-	console.log(i18n.language, 'nekkk')
+	}, [i18n.language, value])
 	return (
 		<div className='md:grid md:grid-cols-3 px-8 h-[100vh] my-auto' data-aos='fade-right'>
 			<div className='hidden md:block hexagon z-1 px-8'></div>
@@ -28,25 +30,12 @@ const Home: React.FC = () => {
 			</div>
 			<div className='w-full md:col-span-2 my-auto px-20'>
 				<h1 className='text-3xl font-bold leading-10 block w-full md:text-left text-primary'>{t('welcome')}</h1>
-				<h1 className='text-3xl font-bold leading-10 block w-full md:text-left text-secondary'>{data?.name}</h1>
-				<p className='text-secondary text-sm font-normal leading-7 mt-4 mb-7'>{data?.desc}</p>
+				<h1 className='text-3xl font-bold leading-10 block w-full md:text-left text-primary'>{data?.name}</h1>
+				<p className='text-primary text-sm font-normal leading-7 mt-4 mb-7'>{data?.desc}</p>
 
-				<div className='flex gap-10 my-15'>
-					<button className='border-[1px] border-primary relative pr-4 rounded-[35px] mb-5 btn'>
-						<span className='p-4 rounded-[35px] bg-primary btn-icon w-full h-full'>
-							<FaArrowRight className='text-white w-5 h-5 ml-auto' />
-						</span>
-						<span className='font-bold text-base text-secondary btn-text pl-16 pr-2 py-[14px] inline-block'>
-							Portfolio
-						</span>
-					</button>
-
-					<button className='border-[1px] border-primary relative pr-4 rounded-[35px] mb-5 btn'>
-						<span className='p-4 rounded-[35px] bg-primary btn-icon w-full h-full'>
-							<FaArrowRight className='text-white w-5 h-5 ml-auto' />
-						</span>
-						<span className='font-bold text-base text-secondary btn-text pl-16 pr-2 py-[14px] inline-block'>About</span>
-					</button>
+				<div className='flex gap-5 my-15 justify-start'>
+					<BasicButton icon={<FaArrowRight />} name='Portfolio' path='portfolio' />
+					<BasicButton icon={<FaArrowRight />} name='Contact' path='portfolio' />
 				</div>
 			</div>
 		</div>

@@ -8,6 +8,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setValue } from './../store/slice'
 import userClass from '../page/client/user.service'
+import ButtonLink from './Button/ButtonLink'
 const Header: React.FC = () => {
 	const dispatch = useDispatch()
 	const fetchData = async () => {
@@ -46,24 +47,13 @@ const Header: React.FC = () => {
 
 	const active = navList.findIndex((e) => e.path === pathname)
 	return (
-		<ul className='fixed md:right-4  md:top-[50%] bg-[#2b2a2a] md:bg-transparent justify-items-center w-full py-4 md:py-0 justify-around md:w-fit h-fit right-0 bottom-0  md:translate-y-[-50%] z-20 gap-5 flex md:flex-col '>
-			{navList.map((item, i) => (
-				<li key={i} className='w-fit md:ml-auto'>
-					<Link to={item.path} className='p-0 m-0'>
-						<div
-							className={` relative md:p-4 p-3 rounded-full cursor-pointer transition-show group flex ${i === active ? 'bg-primary-light dark:bg-primary-dark' : 'bg-[#EEEEEE]'}`}
-						>
-							<h2
-								className={`h-[20px] overflow-hidden relative top-[-1px] text-white mr-2 text-base font-medium uppercase hidden group-hover:block transition-show`}
-							>
-								{item.name}
-							</h2>
-							<item.icon className={`w-5 h-5 ${i === active ? 'text-white' : 'text-[#666666]'} `} />
-						</div>
-					</Link>
-				</li>
-			))}
-		</ul>
+		<div className='fixed md:right-4  md:top-[50%] bg-[#2b2a2a] md:bg-transparent justify-items-center w-full py-4 md:py-0 justify-around md:w-fit h-fit right-0 bottom-0  md:translate-y-[-50%] z-20 gap-5 flex md:flex-col '>
+			<ul className='flex justify-end flex-col gap-2'>
+				{navList.map((item, i) => (
+					<ButtonLink path={item.path} name={item.name} icon={<item.icon className='text-white' />} />
+				))}
+			</ul>
+		</div>
 	)
 }
 
