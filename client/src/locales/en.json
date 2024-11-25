@@ -1,5 +1,7 @@
 {
-    "welcome": "Hello, I'm",
-    "description": "This is a sample description.",
-    "setting": "Setting"
+	"welcome": "Hello, I'm",
+	"description": "This is a sample description.",
+	"setting": "Setting",
+	"portfolio": "portfolio",
+	"contact": "Contact"
 }

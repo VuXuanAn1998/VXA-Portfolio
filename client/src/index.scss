@@ -23,10 +23,28 @@ code {
 	transition: all 0.3s ease;
 }
 
-.trapezoid {
-	width: 190px;
-	height: 30px;
-	clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+.trapezoid::before {
+	content: '';
+	width: 215px;
+	height: 80px;
+	border-radius: 35px;
+	background-color: #72b626;
+	position: absolute;
+	top: -45px;
+}
+.trapezoid::after {
+	content: '';
+	width: 200px;
+	height: 70px;
+	border-radius: 30px;
+	border: 2px solid white;
+	position: absolute;
+	top: -40px;
+	background-color: transparent;
+}
+
+.dark .trapezoid::before {
+	background-color: #ffb400;
 }
 
 @keyframes wiggle {

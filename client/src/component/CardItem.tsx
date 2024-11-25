@@ -32,7 +32,7 @@ const CardItem: React.FC<{ cardValue: CartItemProps }> = ({ cardValue }) => {
 						{cardValue.desc}
 					</p>
 				</div>
-				<div className='p-6 pt-0 flex gap-3'>
+				<div className='p-6 pt-0 flex gap-3 flex-wrap'>
 					{cardValue &&
 						cardValue.tags.map((item: string, index: number) => {
 							return <Chip label={item} color='primary' key={index} />

@@ -28,14 +28,14 @@ const Home: React.FC = () => {
 					className='md:w-full md:h-fit md:my-auto md:rounded-[30px] custom-shadow rounded-full w-[270px] h-[270px] object-cover z-10'
 				/>
 			</div>
-			<div className='w-full md:col-span-2 my-auto px-20'>
+			<div className='w-full md:col-span-2 my-auto pr-32'>
 				<h1 className='text-3xl font-bold leading-10 block w-full md:text-left text-primary'>{t('welcome')}</h1>
 				<h1 className='text-3xl font-bold leading-10 block w-full md:text-left text-primary'>{data?.name}</h1>
 				<p className='text-primary text-sm font-normal leading-7 mt-4 mb-7'>{data?.desc}</p>
 
 				<div className='flex gap-5 my-15 justify-start'>
-					<BasicButton icon={<FaArrowRight />} name='Portfolio' path='portfolio' />
-					<BasicButton icon={<FaArrowRight />} name='Contact' path='portfolio' />
+					<BasicButton icon={<FaArrowRight />} name={t('portfolio')} path='portfolio' />
+					<BasicButton icon={<FaArrowRight />} name={t('contact')} path='contact' />
 				</div>
 			</div>
 		</div>

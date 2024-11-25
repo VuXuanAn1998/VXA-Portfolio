@@ -54,26 +54,30 @@ const Setting: React.FC = () => {
 	}
 	return (
 		<div className='flex gap-5 absolute  w-full z-50'>
-			<div className=' trapezoid mx-auto bg-primary-light dark:bg-primary-dark flex items-center justify-center gap-3'>
-				<audio ref={audioRef} src='/audio.mp3' autoPlay className='test nekkk' />
-				<button
-					className='text-white mx-2 transition-transform duration-200 ease-in-out hover:scale-110'
-					onClick={changeMode}
-				>
-					{theme === 'dark' ? <MdDarkMode /> : <MdOutlineLightMode />}
-				</button>
-				<button
-					className='text-white  mx-2 transition-transform duration-200 ease-in-out hover:scale-110'
-					onClick={changeLanguages}
-				>
-					<IoLanguageSharp />
-				</button>
-				<button
-					className='text-white mx-2 transition-transform duration-200 ease-in-out hover:scale-110 animate-icon'
-					onClick={handlePlayPause}
-				>
-					{isPlaying ? <LuMusic4 /> : <TbMusicOff />}
-				</button>
+			<div className='trapezoid mx-auto flex items-center justify-center gap-3 relative'>
+				<audio ref={audioRef} src='/audio.mp3' autoPlay />
+				<div className='flex mt-1 gap-3'>
+					<button
+						className='text-white mx-2 transition-transform duration-200 ease-in-out hover:scale-110 z-10'
+						onClick={changeMode}
+					>
+						{theme === 'dark' ? <MdDarkMode className='w-4 h-4' /> : <MdOutlineLightMode className='w-4 h-4' />}
+					</button>
+
+					<button
+						className='text-white mx-2 transition-transform duration-200 ease-in-out hover:scale-110 animate-icon z-10'
+						onClick={handlePlayPause}
+					>
+						{isPlaying ? <LuMusic4 className='w-4 h-4' /> : <TbMusicOff className='w-4 h-4' />}
+					</button>
+
+					<button
+						className='text-white  mx-2 transition-transform duration-200 ease-in-out hover:scale-110 z-10'
+						onClick={changeLanguages}
+					>
+						<IoLanguageSharp className='w-4 h-4' />
+					</button>
+				</div>
 			</div>
 		</div>
 	)
