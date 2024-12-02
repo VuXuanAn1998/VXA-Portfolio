@@ -1,13 +1,12 @@
-import PageHeader from '../../../component/PageHeader'
 import React, { useEffect, useState } from 'react'
-import userClass from '../user.service'
+import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
+import PageHeader from '../../../component/PageHeader'
 import { UserPresenter } from '../user.presenter'
 import BasicInfo from './component/BasicInfo'
+import EducationExperiences from './component/EducationExperiences'
 import NumberUser from './component/NumberUser'
 import SkillList from './component/SkillList'
-import EducationExperiences from './component/EducationExperiences'
-import { useSelector } from 'react-redux'
-import { useTranslation } from 'react-i18next'
 const About: React.FC = () => {
 	const value = useSelector((state: any) => state.user.value)
 	const { i18n } = useTranslation()
@@ -30,7 +29,7 @@ const About: React.FC = () => {
 	return (
 		<div className='container mx-auto mb-20'>
 			<PageHeader white='About' yellow='Me' titleBg='About Me' />
-			<div className='grid grid-cols-5 container mx-auto'>
+			<div className='container mx-auto grid grid-cols-5'>
 				<BasicInfo basicInfo={basicInfo} />
 				<NumberUser numberUser={numberUser} />
 			</div>

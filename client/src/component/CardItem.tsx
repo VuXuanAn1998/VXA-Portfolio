@@ -18,21 +18,21 @@ const CardItem: React.FC<{ cardValue: CartItemProps }> = ({ cardValue }) => {
 	return (
 		<React.Fragment>
 			<div
-				className='relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mb-8'
+				className='relative mb-8 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md'
 				onClick={() => setOpen(true)}
 			>
-				<div className='relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600'>
+				<div className='bg-blue-gray-500 shadow-blue-gray-500/40 relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-border text-white shadow-lg'>
 					<img src={cardValue.img[0]} alt='' />
 				</div>
 				<div className='p-6'>
-					<h5 className='mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased'>
+					<h5 className='text-blue-gray-900 mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased'>
 						{cardValue.name}
 					</h5>
 					<p className='block font-sans text-base font-light leading-relaxed text-inherit antialiased'>
 						{cardValue.desc}
 					</p>
 				</div>
-				<div className='p-6 pt-0 flex gap-3 flex-wrap'>
+				<div className='flex flex-wrap gap-3 p-6 pt-0'>
 					{cardValue &&
 						cardValue.tags.map((item: string, index: number) => {
 							return <Chip label={item} color='primary' key={index} />
@@ -50,8 +50,8 @@ const CardItem: React.FC<{ cardValue: CartItemProps }> = ({ cardValue }) => {
 			>
 				<div className='w-[1000px] bg-[#252525]'>
 					<div className='grid grid-cols-2 gap-4'>
-						<div className='w-full h-fit p-5'>
-							<h1 className='text-32-50-700 text-primary-light dark:text-primary-dark border-b-[2px] border-solid border-[#666666] mb-4'>
+						<div className='h-fit w-full p-5'>
+							<h1 className='mb-4 border-b-[2px] border-solid border-[#666666] text-32-50-700 text-primary-light dark:text-primary-dark'>
 								{cardValue.name}
 							</h1>
 							<Carousel
@@ -70,8 +70,8 @@ const CardItem: React.FC<{ cardValue: CartItemProps }> = ({ cardValue }) => {
 							</Carousel>
 						</div>
 
-						<div className='w-full h-fit p-5'>
-							<h1 className='text-32-50-700 text-primary-light dark:text-primary-dark border-b-[2px] border-solid border-[#666666] mb-4'>
+						<div className='h-fit w-full p-5'>
+							<h1 className='mb-4 border-b-[2px] border-solid border-[#666666] text-32-50-700 text-primary-light dark:text-primary-dark'>
 								Details
 							</h1>
 							<div className='flex flex-col gap-3 text-white'>
@@ -95,10 +95,10 @@ const CardItem: React.FC<{ cardValue: CartItemProps }> = ({ cardValue }) => {
 									<span className='text-16-26-600'>Frontend: </span>
 									React JS
 								</p>
-								<p className='text-16-20-400 flex flex-col'>
+								<p className='flex flex-col text-16-20-400'>
 									<span className='text-16-26-600'>Responsibilities: </span>
 									{cardValue.responsibilities.map((item) => {
-										return <p className='ml-12 mb-2'>* {item}</p>
+										return <p className='mb-2 ml-12'>* {item}</p>
 									})}
 								</p>
 							</div>

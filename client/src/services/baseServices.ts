@@ -28,15 +28,12 @@ export class BaseService {
 	}
 
 	private handleRequest = async (config: AxiosRequestConfig) => {
-
-
 		return config
 	}
 
 	private handleError = async (error: AxiosError) => {
 		const response = error.response?.data
 		if (error.response?.status === 401) {
-		
 		}
 		return response
 	}

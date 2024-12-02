@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
 		<div className='mb-10'>
 			<PageHeader white='Get in' yellow='Touch' titleBg='Contact' />
 			<div className='container mx-auto text-center'></div>
-			<div className='grid grid-cols-[2fr_3fr] gap-5 container mx-auto'>
+			<div className='container mx-auto grid grid-cols-[2fr_3fr] gap-5'>
 				<ContactAddress />
 				<FormContact />
 			</div>

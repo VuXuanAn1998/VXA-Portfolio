@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { MdModeEdit } from 'react-icons/md'
 export default function Uploader() {
 	const buttonRef = useRef<HTMLInputElement>(null)
@@ -10,24 +10,24 @@ export default function Uploader() {
 
 	return (
 		<div className=''>
-			<div className='relative w-fit shadow-lg rounded-full'>
+			<div className='relative w-fit rounded-full shadow-lg'>
 				<input
 					ref={buttonRef}
 					type='file'
 					id='imageUpload'
 					accept='.png, .jpg, .jpeg'
-					className='absolute top-0 left-0 w-fit h-full hidden'
+					className='absolute left-0 top-0 hidden h-full w-fit'
 				/>
 				<div
-					className='grid place-content-center w-[40px] h-[40px] bg-white rounded-full absolute top-2 right-6 shadow-lg cursor-pointer'
+					className='absolute right-6 top-2 grid h-[40px] w-[40px] cursor-pointer place-content-center rounded-full bg-white shadow-lg'
 					onClick={handleDivClick}
 				>
-					<MdModeEdit className='w-5 h-5' />
+					<MdModeEdit className='h-5 w-5' />
 				</div>
 				<img
 					src='http://i.pravatar.cc/500?img=7'
 					alt=''
-					className='rounded-full border-[2px] border-solid border-white w-[250px] h-[250px]'
+					className='h-[250px] w-[250px] rounded-full border-[2px] border-solid border-white'
 				/>
 			</div>
 		</div>

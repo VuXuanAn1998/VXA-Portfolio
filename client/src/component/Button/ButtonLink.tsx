@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './Button.scss'
 type MyComponentProps = {
@@ -9,7 +9,7 @@ type MyComponentProps = {
 
 const ButtonLink: React.FC<MyComponentProps> = ({ path, icon, name }: MyComponentProps) => {
 	return (
-		<Link to={path} className='p-0 m-0 flex justify-end'>
+		<Link to={path} className='m-0 flex justify-end p-0'>
 			<li className='icon-content'>
 				<a
 					href='https://linkedin.com/'

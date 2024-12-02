@@ -5,7 +5,7 @@
 	@apply border-primary-light dark:border-primary-dark;
 }
 .hexagon {
-	@apply fixed w-full h-[200%] top-[-50%] left-[-83%] rotate-[-15deg] bg-primary;
+	@apply bg-primary fixed left-[-83%] top-[-50%] h-[200%] w-full rotate-[-15deg];
 }
 .text-primary {
 	@apply text-text-light dark:text-text-dark;

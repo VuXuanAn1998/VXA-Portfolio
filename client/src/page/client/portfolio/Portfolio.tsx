@@ -1,10 +1,10 @@
-import PageHeader from '../../../component/PageHeader'
+import { Checkbox, FormControlLabel, FormGroup } from '@mui/material'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
+import PageHeader from '../../../component/PageHeader'
 import { UserPresenter } from '../user.presenter'
 import ProjectList from './component/Projectlist'
-import { Checkbox, FormControlLabel, FormGroup } from '@mui/material'
-import { useSelector } from 'react-redux'
-import { useTranslation } from 'react-i18next'
 
 const Portfolio: React.FC = () => {
 	const [projectList, setProjectList] = useState<any>(null)
@@ -39,7 +39,7 @@ const Portfolio: React.FC = () => {
 		<div className='mb-10'>
 			<PageHeader white='My' yellow='Portfolio' titleBg='Works' />
 			<div className='container mx-auto text-center'></div>
-			<div className='container grid grid-cols-[auto_1fr] mx-auto mt-5 gap-10'>
+			<div className='container mx-auto mt-5 grid grid-cols-[auto_1fr] gap-10'>
 				<div className='flex flex-col gap-7 dark:text-white'>
 					<div>
 						<h1 className='text-16-26-600'>Framework/Platforms</h1>

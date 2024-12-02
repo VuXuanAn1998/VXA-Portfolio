@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
-import { INav } from '../types/common'
 import { AiFillHome } from 'react-icons/ai'
-import { FaBriefcase } from 'react-icons/fa'
-import { FaUser } from 'react-icons/fa'
+import { FaBriefcase, FaUser } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
-import { Link, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { setValue } from './../store/slice'
+import { useLocation } from 'react-router-dom'
 import userClass from '../page/client/user.service'
+import { INav } from '../types/common'
+import { setValue } from './../store/slice'
 import ButtonLink from './Button/ButtonLink'
 const Header: React.FC = () => {
 	const dispatch = useDispatch()
@@ -47,8 +46,8 @@ const Header: React.FC = () => {
 
 	const active = navList.findIndex((e) => e.path === pathname)
 	return (
-		<div className='fixed md:right-4  md:top-[50%] bg-[#2b2a2a] md:bg-transparent justify-items-center w-full py-4 md:py-0 justify-around md:w-fit h-fit right-0 bottom-0  md:translate-y-[-50%] z-20 gap-5 flex md:flex-col '>
-			<ul className='flex justify-end flex-col gap-2'>
+		<div className='fixed bottom-0 right-0 z-20 flex h-fit w-full justify-around justify-items-center gap-5 bg-[#2b2a2a] py-4 md:right-4 md:top-[50%] md:w-fit md:translate-y-[-50%] md:flex-col md:bg-transparent md:py-0'>
+			<ul className='flex flex-col justify-end gap-2'>
 				{navList.map((item, i) => (
 					<ButtonLink path={item.path} name={item.name} icon={<item.icon className='text-white' />} />
 				))}

@@ -4,8 +4,8 @@ import { TSkillList } from '../../user.type'
 const SkillList: React.FC<{ skillList: TSkillList[] }> = ({ skillList }) => {
 	return (
 		<div>
-			<p className='text-[26px] font-bold text-[#666666] text-center uppercase'>Skills</p>
-			<hr className='border-[1px] border-[#6666666] w-[40%] my-8 mx-auto'></hr>
+			<p className='text-center text-[26px] font-bold uppercase text-[#666666]'>Skills</p>
+			<hr className='mx-auto my-8 w-[40%] border-[1px] border-[#6666666]'></hr>
 			<div className='grid grid-flow-row grid-cols-3'>
 				{skillList &&
 					skillList.map((skill: TSkillList, index: number) => {
@@ -15,7 +15,7 @@ const SkillList: React.FC<{ skillList: TSkillList[] }> = ({ skillList }) => {
 								<div className='flex flex-wrap gap-5 pt-5'>
 									{skill.skillList &&
 										skill.skillList.map((skil) => {
-											return <img src={skil.img} alt={skil.name} className='w-16 h-16' />
+											return <img src={skil.img} alt={skil.name} className='h-16 w-16' />
 										})}
 								</div>
 							</div>

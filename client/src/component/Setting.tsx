@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import { useTranslation } from 'react-i18next'
-import { MdDarkMode } from 'react-icons/md'
-import { MdOutlineLightMode } from 'react-icons/md'
 import { IoLanguageSharp } from 'react-icons/io5'
 import { LuMusic4 } from 'react-icons/lu'
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md'
 import { TbMusicOff } from 'react-icons/tb'
 const Setting: React.FC = () => {
 	const { t, i18n } = useTranslation()
@@ -53,29 +52,29 @@ const Setting: React.FC = () => {
 		setIsPlaying(!isPlaying)
 	}
 	return (
-		<div className='flex gap-5 absolute  w-full z-50'>
-			<div className='trapezoid mx-auto flex items-center justify-center gap-3 relative'>
+		<div className='absolute z-50 flex w-full gap-5'>
+			<div className='trapezoid relative mx-auto flex items-center justify-center gap-3'>
 				<audio ref={audioRef} src='/audio.mp3' autoPlay />
-				<div className='flex mt-1 gap-3'>
+				<div className='mt-1 flex gap-3'>
 					<button
-						className='text-white mx-2 transition-transform duration-200 ease-in-out hover:scale-110 z-10'
+						className='z-10 mx-2 text-white transition-transform duration-200 ease-in-out hover:scale-110'
 						onClick={changeMode}
 					>
-						{theme === 'dark' ? <MdDarkMode className='w-4 h-4' /> : <MdOutlineLightMode className='w-4 h-4' />}
+						{theme === 'dark' ? <MdDarkMode className='h-4 w-4' /> : <MdOutlineLightMode className='h-4 w-4' />}
 					</button>
 
 					<button
-						className='text-white mx-2 transition-transform duration-200 ease-in-out hover:scale-110 animate-icon z-10'
+						className='animate-icon z-10 mx-2 text-white transition-transform duration-200 ease-in-out hover:scale-110'
 						onClick={handlePlayPause}
 					>
-						{isPlaying ? <LuMusic4 className='w-4 h-4' /> : <TbMusicOff className='w-4 h-4' />}
+						{isPlaying ? <LuMusic4 className='h-4 w-4' /> : <TbMusicOff className='h-4 w-4' />}
 					</button>
 
 					<button
-						className='text-white  mx-2 transition-transform duration-200 ease-in-out hover:scale-110 z-10'
+						className='z-10 mx-2 text-white transition-transform duration-200 ease-in-out hover:scale-110'
 						onClick={changeLanguages}
 					>
-						<IoLanguageSharp className='w-4 h-4' />
+						<IoLanguageSharp className='h-4 w-4' />
 					</button>
 				</div>
 			</div>

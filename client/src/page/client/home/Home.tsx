@@ -1,9 +1,9 @@
-import { useTranslation } from 'react-i18next'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { FaArrowRight } from 'react-icons/fa'
-import { UserPresenter } from '../user.presenter'
 import { useSelector } from 'react-redux'
 import BasicButton from '../../../component/Button/BasicButton'
+import { UserPresenter } from '../user.presenter'
 
 const Home: React.FC = () => {
 	const { t } = useTranslation()
@@ -19,21 +19,21 @@ const Home: React.FC = () => {
 		}
 	}, [i18n.language, value])
 	return (
-		<div className='md:grid md:grid-cols-3 px-8 h-[100vh] my-auto' data-aos='fade-right'>
-			<div className='hidden md:block hexagon z-1 px-8'></div>
-			<div className='px-8 grid md:col-span-1 md:h-full h-fit place-content-center z-20'>
+		<div className='my-auto h-[100vh] px-8 md:grid md:grid-cols-3' data-aos='fade-right'>
+			<div className='hexagon z-1 hidden px-8 md:block'></div>
+			<div className='z-20 grid h-fit place-content-center px-8 md:col-span-1 md:h-full'>
 				<img
 					src={data?.avatar}
 					alt='avatar'
-					className='md:w-full md:h-fit md:my-auto md:rounded-[30px] custom-shadow rounded-full w-[270px] h-[270px] object-cover z-10'
+					className='custom-shadow z-10 h-[270px] w-[270px] rounded-full object-cover md:my-auto md:h-fit md:w-full md:rounded-[30px]'
 				/>
 			</div>
-			<div className='w-full md:col-span-2 my-auto pr-32'>
-				<h1 className='text-3xl font-bold leading-10 block w-full md:text-left text-primary'>{t('welcome')}</h1>
-				<h1 className='text-3xl font-bold leading-10 block w-full md:text-left text-primary'>{data?.name}</h1>
-				<p className='text-primary text-sm font-normal leading-7 mt-4 mb-7'>{data?.desc}</p>
+			<div className='my-auto w-full pr-32 md:col-span-2'>
+				<h1 className='text-primary block w-full text-3xl font-bold leading-10 md:text-left'>{t('welcome')}</h1>
+				<h1 className='text-primary block w-full text-3xl font-bold leading-10 md:text-left'>{data?.name}</h1>
+				<p className='text-primary mb-7 mt-4 text-sm font-normal leading-7'>{data?.desc}</p>
 
-				<div className='flex gap-5 my-15 justify-start'>
+				<div className='my-15 flex justify-start gap-5'>
 					<BasicButton icon={<FaArrowRight />} name={t('portfolio')} path='portfolio' />
 					<BasicButton icon={<FaArrowRight />} name={t('contact')} path='contact' />
 				</div>

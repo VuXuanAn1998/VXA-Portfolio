@@ -1,6 +1,4 @@
 import React from 'react'
-import { IoMdDownload } from 'react-icons/io'
-import Button from '../../../../component/Button'
 const DownloadResume: React.FC = () => {
 	return (
 		<h1>okok</h1>

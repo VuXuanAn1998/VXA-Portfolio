@@ -7,7 +7,7 @@ const SkillItem: React.FC<{ title: string; skillList: string[] }> = ({ title, sk
 			<div className='flex flex-wrap gap-5 pt-5'>
 				{skillList &&
 					skillList.map((item, index) => {
-						return <img src={item} alt='react' className='w-16 h-16' />
+						return <img src={item} alt='react' className='h-16 w-16' />
 					})}
 			</div>
 		</div>
